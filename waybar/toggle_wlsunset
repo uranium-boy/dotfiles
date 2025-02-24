@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if pgrep -x "wlsunset" > /dev/null
+then
+    pkill -9 "wlsunset"
+else
+    wlsunset -t 4500
+fi
