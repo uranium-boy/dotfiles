@@ -1,0 +1,38 @@
+ignore-empty-password
+indicator-idle-visible
+
+indicator-radius=60
+indicator-thickness=15
+text-color=ffffff
+
+# image='/home/haenim/.config/wallpapers/landscape/image (16).jpg'
+color=000000
+
+# normal
+ring-color=77dd77
+key-hl-color=60b260
+# backspace
+bs-hl-color=d85952
+inside-color=00000000
+line-color=00000000
+
+# cleared
+ring-clear-color=cc962c
+inside-clear-color=ffbc38
+line-clear-color=00000000
+
+# caps-lock
+ring-caps-lock-color=f6c177
+# doesn't change inside color for some reason
+inside-caps-lock-color=d85952
+line-caps-lock-color=00000000
+
+# verifying
+ring-ver-color=3e8aa5
+inside-ver-color=52b4d8
+line-ver-color=00000000
+
+# wrong
+inside-wrong-color=ff6961
+ring-wrong-color=cc534d
+line-wrong-color=00000000
