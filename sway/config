@@ -21,7 +21,7 @@ set $menu wofi --show
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /home/haenim/.config/wallpapers/anime/image\ \(9\)\(1\).jpg fill
 
 font pango: RobotoMonoNerdFont 12
 
@@ -63,7 +63,7 @@ input "type:touchpad" {
     drag_lock disabled
 }
 
-input "type:keyboard" {
+input "1:1:AT_Translated_Set_2_keyboard" {
     xkb_options caps:swapescape
 }
 
@@ -230,3 +230,9 @@ bar {
 
 exec swaync
 exec fcitx5 -d
+
+# flameshot
+# exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+# exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+# for_window [app_id="flameshot"] floating enable, fullscreen disable, move absolute position 0, 0, border pixel 0
+# include /etc/sway/config.d/*

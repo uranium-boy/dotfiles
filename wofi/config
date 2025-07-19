@@ -1,0 +1,7 @@
+mode=drun
+allow_images=true
+width=400
+height=350
+no_actions=true
+key_up=Ctrl-p
+key_down=Ctrl-n
