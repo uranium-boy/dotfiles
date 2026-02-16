@@ -18,9 +18,6 @@ vim.opt.tabstop = 4         -- 4 spaces per tab
 vim.opt.softtabstop = 4     -- 4 spaces per tab
 vim.opt.shiftwidth = 4      -- 4 spaces for << command (and autoindent)
 
--- Smart identation (is it necessary?)
--- vim.opt.smartindent = true
-
 -- Highlight line length limit
 vim.opt.colorcolumn = "80"
 
@@ -52,11 +49,15 @@ vim.opt.wrap = false
 -- Center the cursor vertically
 vim.opt.scrolloff = 999
 
--- vim.api.nvim_create_autocmd("BufWritePost", {
---    pattern = { "*.php" },
---    callback = function ()
---        vim.fn.system("browser-sync reload")
---    end,
--- })
+-- diagnostics changed since 0.11
+vim.diagnostic.config({
+    virtual_lines = true
+})
 
--- Use <C-h> as jump forward through snippet placeholders in nvim-cmp.lua
+vim.opt.winborder = "rounded"
+
+-- undotree config
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
+vim.g.undotree_SplitWidth = 30
+vim.g.undotree_SetFocusWhenToggle = 1

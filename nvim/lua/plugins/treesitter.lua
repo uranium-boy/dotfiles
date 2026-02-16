@@ -1,5 +1,6 @@
 return {
     "nvim-treesitter/nvim-treesitter",
+    lazy = false,
     build = ":TSUpdate",
 
     config = function ()
@@ -11,9 +12,6 @@ return {
             sync_install = false,
             highlight = { enable = true },
             indent = { enable = true },
---            keymaps = {
---                init_selection = "<leader>ss",
---            },
         })
     end
 }
