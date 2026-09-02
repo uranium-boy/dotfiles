@@ -1,0 +1,10 @@
+[Unit]
+Description=Disable keyboard backlight on boot
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'echo "\\_SB.ATKD.SLKB 0" > /proc/acpi/call'
+
+[Install]
+WantedBy=multi-user.target

@@ -56,7 +56,7 @@ exec swayidle -w \
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-input "type:touchpad" {
+input "1267:12934:ASUE1213:00_04F3:3286_Touchpad" {
     dwt enabled
     tap enabled
     natural_scroll enabled
@@ -65,8 +65,18 @@ input "type:touchpad" {
     drag_lock disabled
 }
 
+# input "type:touchpad" {
+#     dwt enabled
+#     tap enabled
+#     natural_scroll enabled
+#     middle_emulation enabled
+#     pointer_accel 0.2
+#     drag_lock disabled
+# }
+
 input "type:keyboard" {
     xkb_options caps:swapescape
+    xkb_layout pl
 }
 
 ### Key bindings
@@ -215,7 +225,7 @@ bindsym --locked XF86AudioMute exec wpctl set-mute \@DEFAULT_SINK@ toggle
 bindsym --locked XF86AudioLowerVolume exec wpctl set-volume \@DEFAULT_SINK@ 5%-
 bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume \@DEFAULT_SINK@ 5%+
 # Special keys to adjust brightness via brightnessctl
-bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym --locked XF86MonBrightnessDown exec brightnessctl -n set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 # Special key to take a screenshot with grim
 # bindsym Print exec grim -g "$(slurp)" - | wl-copy
@@ -232,6 +242,11 @@ bar {
 
 exec swaync
 exec fcitx5 -d
+
+exec_always dbus-update-activation-environment --systemd \
+  WAYLAND_DISPLAY \
+  XDG_CURRENT_DESKTOP=sway \
+  XDG_SESSION_TYPE=wayland
 
 # flameshot
 # exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK

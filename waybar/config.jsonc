@@ -79,7 +79,7 @@
         "tooltip-format-connected": "{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-        "on-click": "rfkill toggle 2" // assuming hci0 id is always 2
+        "on-click": "rfkill toggle bluetooth"
     },
     "tray": {
         "icon-size": 21,
@@ -127,16 +127,32 @@
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% 󰃨",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
+//    "battery": {
+//        "states": {
+//            // "good": 95,
+//            "warning": 30,
+//            "critical": 15
+//        },
+//        "format": "{capacity}% {icon}",
+//        "format-full": "{capacity}% {icon}",
+//        "format-charging": "{capacity}% ",
+//        "format-plugged": "{capacity}% ",
+//        "format-alt": "{time} {icon}",
+//        "format-icons": ["", "", "", "", ""]
+//    },
     "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
+        "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "format-linked": "{ifname} (No IP) 󰊗",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
@@ -153,7 +169,7 @@
         }
     },
     "wireplumber": {
-        "format": "{volume}% 🔈",
+        "format": "{volume}% ",
         "format-muted": "0% 󰖁",
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     }

@@ -35,6 +35,6 @@ zstyle ':autocomplete:*' add-semicolon no
 
 # plugins
 eval "$(starship init zsh)"
-source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source /home/haenim/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
