@@ -21,7 +21,8 @@ set $menu wofi --show
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/haenim/.config/wallpapers/anime/image_10.jpg fill
+# output * bg /home/haenim/.config/wallpapers/anime/image_10.jpg fill
+output * bg \"$(find /home/haenim/dotfiles/wallpapers -type f | shuf -n 1)\" fill
 
 font pango: RobotoMonoNerdFont 12
 
